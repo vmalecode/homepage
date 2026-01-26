@@ -35,20 +35,30 @@ const NavBar = () => {
         </div>
         <Dialog >
           <DialogTrigger><Menu /></DialogTrigger>
-          <DialogContent className="bg-background/60 backdrop-blur">
-            <DialogTitle>Test Title</DialogTitle>
-          </DialogContent>
-        </Dialog>
+          <DialogContent className="bg-background/60 backdrop-blur ">
+            <div className="border-1 ">
+              <ul className="text-3xl space-y-1 ">
+                <li><DialogTitle className="my-0 text-sm text-secondary">Menu</DialogTitle></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/">About</Link></li>
+                <li><Link href="/">Blog</Link></li>
+                <li><Link href="/">Github</Link></li>
+                <li><Link href="/">Portfolio</Link></li>
+                <li><Link href="/">Software</Link></li>
+              </ul>
+            </div >
+          </DialogContent >
+        </Dialog >
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex gap-2">
+        < ul className="hidden md:flex gap-2" >
           <Link href="/"><Button variant="link">Home</Button></Link>
           <Link href="/"><Button variant="link">About</Button></Link>
           <Link href="/"><Button variant="link">Blog</Button></Link>
           <Link href="/"><Button variant="link">Github</Button></Link>
           <Link href="/"><Button variant="link">Portfolio</Button></Link>
           <Link href="/"><Button variant="link">Software</Button></Link>
-        </ul>
+        </ul >
 
         <ModeToggle />
       </div >
