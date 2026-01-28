@@ -24,18 +24,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { useState } from "react"
-import { useRouter } from "next/compat/router"
 
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const router = useRouter()
 
-  const handleNavigate = (href: string) => {
-    console.log("Hi")
-    setOpen(false)
-    router.push(href)
-  }
   return (
     <nav className="sticky top-0  z-50 border-b bg-background/40 backdrop-blur">
       <div className="flex h-15 items-center px-4 justify-between">
@@ -45,17 +38,14 @@ const NavBar = () => {
           Aaron Van Der Male
         </div>
         <Dialog onOpenChange={setOpen}>
-          <DialogTrigger asChild>
-            <button className="md:hidden">
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
+          <DialogTrigger >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </DialogTrigger>
           <div className="font-bold md:hidden truncate">Aaron Van Der Male</div>
           <DialogContent className="bg-background/60 backdrop-blur ">
             <ul className="text-3xl space-y-1 text-primary">
               <li><DialogTitle className="my-0 text-sm text-primary/50">Menu</DialogTitle></li>
-              <li><button onClick={() => handleNavigate("/blog")}>Blog</button></li>
-              <DialogClose asChild>
+              <DialogClose >
                 <li><Link href={"/blog"}>Blog????</Link ></li>
               </DialogClose>
             </ul>
