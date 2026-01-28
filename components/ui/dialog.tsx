@@ -49,11 +49,11 @@ function DialogContent({
 }) {
   return (
     <DialogPortal>
-      <DialogOverlay />
+      <DialogOverlay className="fixed top-14 backdrop-blur" />
       <DialogPrimitive.Popup
         data-slot="dialog-content"
         className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-14 z-50 grid w-full h-full p-6 shadow-lg duration-200 outline-none sm:max-w-lg",
+          "bg-background data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 grid gap-4 p-4 text-sm duration-100 sm:max-w-sm fixed top-14 left-0 z-50 w-screen h-screen outline-none",
           className
         )}
         {...props}
