@@ -45,9 +45,12 @@ const NavBar = () => {
           <DialogContent className="bg-background/60 backdrop-blur ">
             <ul className="text-3xl space-y-1 text-primary">
               <li><DialogTitle className="my-0 text-sm text-primary/50">Menu</DialogTitle></li>
-              <DialogClose >
-                <li><Link href={"/blog"}>Blog????</Link ></li>
-              </DialogClose>
+              <li><DialogClose><Link href={"/"}>Home</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/"}>About</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/blog"}>Blog</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/"}>Github</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/"}>Portfolio</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/"}>Software</Link ></DialogClose></li>
             </ul>
           </DialogContent >
         </Dialog >
