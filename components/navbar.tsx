@@ -38,7 +38,7 @@ const NavBar = () => {
           Aaron Van Der Male
         </div>
         <Dialog onOpenChange={setOpen}>
-          <DialogTrigger >
+          <DialogTrigger className="md:hidden">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </DialogTrigger>
           <div className="font-bold md:hidden truncate">Aaron Van Der Male</div>
