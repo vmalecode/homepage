@@ -1,5 +1,4 @@
-import { Post } from "@/interfaces/post";
-import fs from "fs";
+import fs, { readFileSync } from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 
@@ -9,20 +8,25 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+export interface BlogType {
+  slug: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+};
 
-  return { ...data, slug: realSlug, content } as Post;
-}
+const dirContent = fs.readdirSync("content", "utf-8")
 
-export function getAllPosts(): Post[] {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
+export function getBlogs(): BlogType[] {
+  return dirContent.map(file => {
+    const fileContent = readFileSync(`content/${file}`, "utf-8");
+    const { data } = matter(fileContent)
+    const value: BlogType = {
+      slug: data.slug,
+      title: data.title,
+      description: data.description,
+      imageUrl: data?.imageUrl
+    }
+    return value
+  })
 }

@@ -5,32 +5,10 @@ import fs, { readFileSync } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import { Metadata } from "next";
+import { BlogType, getBlogs } from "@/lib/api";
 
-interface BlogType {
-  slug: string;
-  title: string;
-  description: string;
-  imageUrl?: string;
 
-};
-
-const dirContent = fs.readdirSync("content", "utf-8")
-console.log(dirContent)
-
-const blogs: BlogType[] = dirContent.map(file => {
-  const fileContent = readFileSync(`content/${file}`, "utf-8");
-  const { data } = matter(fileContent)
-  const value: BlogType = {
-    slug: data.slug,
-    title: data.title,
-    description: data.description,
-    imageUrl: data?.imageUrl
-  }
-  return value
-})
-
-console.log(blogs)
-
+const blogs: BlogType[] = getBlogs();
 
 const BlogList = () => {
   return (
