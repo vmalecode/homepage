@@ -6,39 +6,36 @@ import matter from "gray-matter";
 import Link from "next/link";
 import { Metadata } from "next";
 import { BlogType, getBlogs } from "@/lib/api";
+import Container from "@/components/container";
+import { BlogPreview } from "@/components/blog-preview";
 
 
 const blogs: BlogType[] = getBlogs();
 
 const BlogList = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center my-2">Our Blogs</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogs.map((blog: BlogType, index: number) => (
-          <div
-            key={index}
-            className="shadow-lg rounded-lg overflow-hidden"
-          >
-            <img
-              className="w-full h-64 object-cover object-top"
-              src={blog.imageUrl ? blog.imageUrl : "/blogimg.jpg"}
-              alt={blog.title}
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
-              <p className="mb-4">{blog.description}</p>
-              <Link
-                href={`/blogpost/${blog.slug}`}
-                className={buttonVariants({ variant: "default" })}
-              >
-                Read More
-              </Link>
-            </div>
-          </div>
-        ))}
+    <Container>
+      {/* Main message */}
+      <div className="py-16 sm:text-center">
+        <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold ">Blogs</h1>
+        <h2 className="text-lg ">A random collection of projects, guides, and things that interest me</h2>
+        <h3 className="text-sm text-muted-foreground">I do not use AI to write or assist with writing</h3>
       </div>
-    </div>
+      {/* Posts */}
+      <div className="relative sm:pb-12 max-w-xl mx-auto">
+
+        {/* vertical line */}
+        <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 sm:block" />
+
+        <div className="space-y-16">
+          {blogs.map((blog) => (
+            <BlogPreview {...blog} key={blog.id} />
+          ))}
+        </div>
+
+      </div>
+
+    </Container>
   );
 };
 

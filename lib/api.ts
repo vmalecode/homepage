@@ -11,8 +11,10 @@ export function getPostSlugs() {
 export interface BlogType {
   slug: string;
   title: string;
+  date: string;
   description: string;
   imageUrl?: string;
+  id: string;
 };
 
 const dirContent = fs.readdirSync("content", "utf-8")
@@ -24,8 +26,10 @@ export function getBlogs(): BlogType[] {
     const value: BlogType = {
       slug: data.slug,
       title: data.title,
+      date: data.date,
       description: data.description,
-      imageUrl: data?.imageUrl
+      imageUrl: data?.imageUrl,
+      id: crypto.randomUUID()
     }
     return value
   })
