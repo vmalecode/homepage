@@ -16,6 +16,8 @@ import { Metadata, ResolvingMetadata } from 'next'
 import Container from '@/components/container'
 import Link from 'next/link'
 import { Separator } from '@/components/ui/separator'
+import DateFormatter from '@/components/date-formatter'
+import { getBlog } from '@/lib/api'
 
 
 type Props = {
@@ -53,16 +55,19 @@ export default async function BlogPage({ params }: Params) {
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent)
 
+  const blog = getBlog(slug);
+
   const htmlContent = (await processor.process(content)).toString()
   return (
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr_1fr] gap-1 pt-2 lg:pt-30">
 
+
         {/* left sidebar */}
         <div className="">
-          <div className="pt-8">
+          <div className="pt-5">
             <Link href="/blog">
-              <p className="text-sm text-slate-400 mb-5">← Back to Blog</p>
+              <p className="text-sm text-muted-foreground mb-3">← Back to Blog</p>
             </Link>
           </div>
         </div>
@@ -70,7 +75,10 @@ export default async function BlogPage({ params }: Params) {
         {/* middle */}
         <div className="">
           <div className="mx-auto max-w-xl justify-items-center prose dark:prose-invert">
-            <h1 className='text-4xl lg:text-5xl font-bold'>{data.title}</h1>
+            <h1 className='text-4xl lg:text-5xl font-bold mb-5 '>{data.title}</h1>
+            <dd className='whitespace-nowrap text-sm text-muted-foreground pl-0 '>
+              <DateFormatter dateString={blog.date} />
+            </dd>
             <Separator className="mt-5 mb-5" />
           </div>
           <article className="pb-32">

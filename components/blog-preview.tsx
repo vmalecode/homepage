@@ -5,14 +5,14 @@ import DateFormatter from "./date-formatter";
 type Props = {
   title: string;
   date: string;
-  description: string;
+  excerpt?: string;
   slug: string;
 };
 
 export function BlogPreview({
   title,
   date,
-  description,
+  excerpt,
   slug,
 }: Props) {
   return (
@@ -25,7 +25,7 @@ export function BlogPreview({
         </h3>
         <div
           className="mt-2 mb-4 line-clamp-2"
-        >{description}</div>
+        >{excerpt}</div>
         <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
           <dt className="sr-only">Date</dt>
           <dd className='whitespace-nowrap text-sm leading-6 text-muted-foreground '>

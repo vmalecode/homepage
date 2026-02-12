@@ -46,11 +46,12 @@ const NavBar = () => {
             <ul className="text-3xl space-y-1 text-primary">
               <li><DialogTitle className="my-0 text-sm text-primary/50">Menu</DialogTitle></li>
               <li><DialogClose><Link href={"/"}>Home</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/portfolio"}>Portfolio</Link ></DialogClose></li>
               <li><DialogClose><Link href={"/"}>About</Link ></DialogClose></li>
               <li><DialogClose><Link href={"/blog"}>Blog</Link ></DialogClose></li>
-              <li><DialogClose><Link href={"/"}>Github</Link ></DialogClose></li>
-              <li><DialogClose><Link href={"/"}>Portfolio</Link ></DialogClose></li>
-              <li><DialogClose><Link href={"/"}>Software</Link ></DialogClose></li>
+              <li><DialogClose><Link href="https://www.github.com/vmalecode" target="_blank" rel="noopener noreferrer" >Github</Link></DialogClose></li>
+              <li><DialogClose><Link href="https://www.linkedin.com/in/aaronvandermale/" target="_blank" rel="noopener noreferrer" >LinkedIn</Link></DialogClose></li>
+              <li><DialogClose><Link href={"/software"}>Software</Link ></DialogClose></li>
             </ul>
           </DialogContent >
         </Dialog >
