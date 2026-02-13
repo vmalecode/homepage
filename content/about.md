@@ -6,7 +6,7 @@ imageUrl:
 date: "2026-02-12"
 ---
 
-Thanks for visiting my website, and your interest in getting to know more about me. The purpose of this website is to provide a space to share public information about myself, while offering a brief reprieve from the assault on the senses that is the modern digital environment.
+Thanks for visiting my website, and your interest in getting to know more about me. The purpose of this website is to provide a spam-free ad-free space to share public information about myself.
 I intend to add a feature later to allow visitors to contact me via email, but am still working on implementing some security features. In the mean time, please don't hesitate to connect with me on [LinkedIn](https://www.linkedin.com/in/aaronvandermale/).
 
 ### Content on v-male.com
