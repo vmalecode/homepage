@@ -6,6 +6,7 @@ import rehypeImgSize from "rehype-img-size"
 import remarkRehype from "remark-rehype"
 import rehypeSlug from 'rehype-slug'
 import rehypeStringify from "rehype-stringify"
+import rehypeExternalLinks from "rehype-external-links"
 import matter from "gray-matter"
 import fs from "fs"
 import Onthispage from '@/components/on-this-page'
@@ -34,10 +35,14 @@ type Params = {
 export default async function BlogPage({ params }: Params) {
   const processor = unified()
     .use(remarkParse)
-    .use(rehypeImgSize, { dir: "public" })
     .use(remarkRehype)
-    .use(rehypeStringify)
+    .use(rehypeImgSize, { dir: "public" })
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["nofollow", "noopener", "noreferrer"]
+    })
     .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings)
     .use(rehypePrettyCode, {
       theme: "github-dark",
       transformers: [
@@ -46,9 +51,8 @@ export default async function BlogPage({ params }: Params) {
           feedbackDuration: 3_000,
         }),
       ],
-    },
-    )
-    .use(rehypeAutolinkHeadings)
+    })
+    .use(rehypeStringify)
 
   const { slug } = await params
   const filePath = `content/${slug}.md`
