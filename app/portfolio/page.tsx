@@ -1,8 +1,8 @@
 import Container from "@/components/container"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
 import boeingLogo from "@/assets/boeing_logo.png"
 import walmartLogo from "@/assets/walmartglobaltech_logo.png"
+import neuLogo from "@/assets/northeastern_university_logo.jpg"
 import Image from 'next/image'
 
 const Portfolio = () => {
@@ -62,9 +62,26 @@ const Portfolio = () => {
             <li>Deployed various dashboards to monitor manufacturing activity and airplane condition of assembly</li>
           </ul>
 
+          <h1 className="whitespace-nowrap mb-4 mt-10 text-3xl sm:text-4xl tracking-tight font-bold ">
+            Education
+          </h1>
+          <Separator className="w-full mt-4 mb-3" />
+          <div className="flex items-center bg-secondary rounded-lg">
+            <Image
+              src={neuLogo.src}
+              alt="BCA"
+              width={50}
+              height={40}
+              className="ml-2 rounded-lg"
+            />
+            <div className="mx-3 ">
+              <h2 className="whitespace-nowrap text-xl sm:text-2xl">Northeastern University</h2>
+              <h3 className="text-muted-foreground whitespace-nowrap">Master's Degree, Computer Science</h3>
+              <h3 className="text-muted-foreground text-sm whitespace-nowrap">May 2023</h3>
+            </div>
+          </div>
 
-
-
+          <div className="min-h-20"></div>
         </div>
 
         <div className="hidden lg:block"></div>
