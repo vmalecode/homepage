@@ -18,8 +18,7 @@ export const Icons = {
         cx="4.5"
         cy="4.5"
         r="4.5"
-        stroke="currentColor"
-        className="fill-white"
+        className="stroke-secondary fill-background"
         strokeWidth="2"
       />
     </svg>

@@ -1,9 +1,3 @@
-// import SampleBlogs from "@/config/sampleblogs";
-import React from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
-import fs, { readFileSync } from "fs";
-import matter from "gray-matter";
-import Link from "next/link";
 import { Metadata } from "next";
 import { BlogType, getBlogs } from "@/lib/api";
 import Container from "@/components/container";
@@ -27,7 +21,7 @@ const BlogList = () => {
       <div className="relative sm:pb-12 max-w-xl mx-auto">
 
         {/* vertical line */}
-        <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 sm:block" />
+        <div className="hidden absolute top-3 bottom-4 right-full mr-7 md:mr-[3.25rem] w-px bg-secondary sm:block" />
 
         <div className="space-y-16">
           {blogs.map((blog) => (

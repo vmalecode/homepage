@@ -18,7 +18,7 @@ export function BlogPreview({
   return (
     <article key={slug} className="relative group">
       <div className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl group-hover:bg-accent dark:group-hover:bg-input/50" />
-      <Icons.dot className="hidden absolute right-full mr-6 top-2 text-slate-200  md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block" />
+      <Icons.dot className="hidden absolute right-full mr-6 top-2 text-accent md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block" />
       <div className="relative">
         <h3 className="text-base font-semibold tracking-tight pt-8 lg:pt-0">
           {title}

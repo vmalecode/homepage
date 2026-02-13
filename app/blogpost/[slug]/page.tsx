@@ -61,8 +61,6 @@ export default async function BlogPage({ params }: Params) {
   return (
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr_1fr] gap-1 pt-2 lg:pt-30">
-
-
         {/* left sidebar */}
         <div className="">
           <div className="pt-5">

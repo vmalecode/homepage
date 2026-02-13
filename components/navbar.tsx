@@ -38,8 +38,9 @@ const NavBar = () => {
           Aaron Van Der Male
         </div>
         <Dialog onOpenChange={setOpen}>
-          <DialogTrigger className="md:hidden">
+          <DialogTrigger className="md:hidden flex items-center ">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <div className="ml-2">Menu</div>
           </DialogTrigger>
           <div className="font-bold md:hidden truncate">Aaron Van Der Male</div>
           <DialogContent className="bg-background/60 backdrop-blur ">
@@ -61,8 +62,8 @@ const NavBar = () => {
           <Link href="/"><Button variant="link">Home</Button></Link>
           <Link href="/"><Button variant="link">About</Button></Link>
           <Link href="/blog"><Button variant="link">Blog</Button></Link>
-          <Link href="/"><Button variant="link">Github</Button></Link>
-          <Link href="/"><Button variant="link">Portfolio</Button></Link>
+          <Link href="https://www.github.com/vmalecode" target="_blank" rel="noopener noreferrer"><Button variant="link">Github</Button></Link>
+          <Link href="/portfolio"><Button variant="link">Portfolio</Button></Link>
           <Link href="/"><Button variant="link">Software</Button></Link>
         </ul >
 
