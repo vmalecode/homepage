@@ -31,7 +31,7 @@ export default function Home() {
         <ul className="text-3xl space-y-2 text-muted-foreground ">
           <li><Link href={"/portfolio"}><Button variant="link" className="text-2xl space-y-1 text-muted-foreground">Portfolio</Button></Link ></li>
           <li><Link href={"/blog"}><Button variant="link" className="text-2xl space-y-1 text-muted-foreground">Blog</Button></Link ></li>
-          <li><Link href={"/"}><Button variant="link" className="text-2xl space-y-1 text-muted-foreground">About</Button></Link ></li>
+          <li><Link href={"/blogpost/about"}><Button variant="link" className="text-2xl space-y-1 text-muted-foreground">About</Button></Link ></li>
           <li><Link href={"/software"}><Button variant="link" className="text-2xl space-y-1 text-muted-foreground">Software</Button></Link ></li>
         </ul >
       </div >

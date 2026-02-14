@@ -17,9 +17,6 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -48,7 +45,7 @@ const NavBar = () => {
               <li><DialogTitle className="my-0 text-sm text-primary/50">Menu</DialogTitle></li>
               <li><DialogClose><Link href={"/"}>Home</Link ></DialogClose></li>
               <li><DialogClose><Link href={"/portfolio"}>Portfolio</Link ></DialogClose></li>
-              <li><DialogClose><Link href={"/"}>About</Link ></DialogClose></li>
+              <li><DialogClose><Link href={"/blogpost/about"}>About</Link ></DialogClose></li>
               <li><DialogClose><Link href={"/blog"}>Blog</Link ></DialogClose></li>
               <li><DialogClose><Link href="https://www.github.com/vmalecode" target="_blank" rel="noopener noreferrer" >Github</Link></DialogClose></li>
               <li><DialogClose><Link href="https://www.linkedin.com/in/aaronvandermale/" target="_blank" rel="noopener noreferrer" >LinkedIn</Link></DialogClose></li>
@@ -60,7 +57,7 @@ const NavBar = () => {
         {/* Desktop nav */}
         < ul className="hidden md:flex gap-2" >
           <Link href="/"><Button variant="link">Home</Button></Link>
-          <Link href="/"><Button variant="link">About</Button></Link>
+          <Link href="/blogpost/about"><Button variant="link">About</Button></Link>
           <Link href="/blog"><Button variant="link">Blog</Button></Link>
           <Link href="https://www.github.com/vmalecode" target="_blank" rel="noopener noreferrer"><Button variant="link">Github</Button></Link>
           <Link href="/portfolio"><Button variant="link">Portfolio</Button></Link>
