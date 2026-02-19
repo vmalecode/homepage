@@ -19,7 +19,7 @@ export default function Home() {
       <h1 className="whitespace-nowrap mb-4 mt-10 text-center text-3xl sm:text-4xl tracking-tight font-bold ">
         Aaron Van Der Male
       </h1>
-      <Separator className="mt-5 mb-5 max-w-8/10 lg:max-w-6/10 mx-auto" />
+      <Separator className="bg-gradient-to-r from transparent via-border to-transparent mt-5 mb-5 max-w-9/10 lg:max-w-6/10 mx-auto" />
       <h3 className="text-center text-xl text-muted-foreground">
         Developer | Seattle, WA
       </h3>
