@@ -61,7 +61,7 @@ const NavBar = () => {
           <Link href="/blog"><Button variant="link">Blog</Button></Link>
           <Link href="https://www.github.com/vmalecode" target="_blank" rel="noopener noreferrer"><Button variant="link">Github</Button></Link>
           <Link href="/portfolio"><Button variant="link">Portfolio</Button></Link>
-          <Link href="/"><Button variant="link">Software</Button></Link>
+          <Link href="/software"><Button variant="link">Software</Button></Link>
         </ul >
 
         <ModeToggle />
