@@ -3,6 +3,7 @@ import { BlogType, getBlogs } from "@/lib/api";
 import Container from "@/components/container";
 import { BlogPreview } from "@/components/blog-preview";
 import { Separator } from "@/components/ui/separator";
+import PageTitle from "@/components/page-title";
 
 
 const blogs: BlogType[] = getBlogs();
@@ -11,11 +12,11 @@ const BlogList = () => {
   return (
     <Container>
       {/* Main message */}
-      <div className="py-16 sm:text-center">
-        <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold ">Blogs</h1>
-        <h2 className="text-lg ">A random collection of projects, guides, and things that interest me</h2>
-        <h3 className="text-sm text-muted-foreground">I do not use AI to write or assist with writing</h3>
-        <Separator className="max-w-xl mx-auto mt-4" />
+      <div className="sm:text-center">
+        <PageTitle title="Blogs">
+          <h2 className="text-lg ">A random collection of projects, guides, and things that interest me</h2>
+          <h3 className="text-sm text-muted-foreground">I do not use AI to write or assist with writing</h3>
+        </PageTitle>
       </div>
       {/* Posts */}
       <div className="relative sm:pb-12 max-w-xl mx-auto">
