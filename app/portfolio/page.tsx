@@ -15,7 +15,7 @@ const Portfolio = () => {
             Experience
           </h1>
           {/* Experience 1 */}
-          <Separator className="w-full mb-3" />
+          <Separator className="w-full mb-3  bg-gradient-to-r from-border via-border to-transparent" />
           <div className="flex items-center bg-secondary rounded-lg">
             <Image
               src={walmartLogo.src}
@@ -39,7 +39,7 @@ const Portfolio = () => {
           </ul>
 
           {/* Experience 2 */}
-          <Separator className="w-full mt-4 mb-3" />
+          <Separator className="w-full mt-4 mb-3  bg-gradient-to-r from-border via-border to-transparent" />
           <div className="flex items-center bg-secondary rounded-lg">
             <Image
               src={boeingLogo.src}
@@ -65,7 +65,7 @@ const Portfolio = () => {
           <h1 className="whitespace-nowrap mb-4 mt-10 text-3xl sm:text-4xl tracking-tight font-bold ">
             Education
           </h1>
-          <Separator className="w-full mt-4 mb-3" />
+          <Separator className="w-full mt-4 mb-3  bg-gradient-to-r from-border via-border to-transparent" />
           <div className="flex items-center bg-secondary rounded-lg">
             <Image
               src={neuLogo.src}

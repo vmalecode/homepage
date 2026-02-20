@@ -26,6 +26,7 @@ export default function Home() {
           sm: max-w-xl
           mx-auto
           my-6
+          min-h-[2px]
           bg-gradient-to-r from transparent via-border to-transparent
   "
         />

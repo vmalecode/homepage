@@ -10,7 +10,7 @@ const PageTitle = ({ title, children }: Props) => {
     <div className="py-16 sm:text-center lg:min-w-xl">
       <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold ">{title}</h1>
       {children}
-      <Separator className="bg-gradient-to-r from transparent via-border to-transparent max-w-xl mx-auto mt-4" />
+      <Separator className="bg-gradient-to-r from-transparent via-border to-transparent max-w-xl mx-auto mt-4" />
     </div>
   )
 }

@@ -27,7 +27,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0  z-50 border-b bg-background/40 backdrop-blur">
+    <nav className="sticky top-0  z-50 bg-background/70 backdrop-blur">
       <div className="flex h-15 items-center px-4 justify-between">
 
         {/* Desktop title */}
