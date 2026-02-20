@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { BlogType, getBlogs } from "@/lib/api";
 import Container from "@/components/container";
 import { BlogPreview } from "@/components/blog-preview";
-import { Separator } from "@/components/ui/separator";
 import PageTitle from "@/components/page-title";
 
 
