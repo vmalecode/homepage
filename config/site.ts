@@ -1,5 +1,5 @@
 const SiteConfig = {
-  "title": "Aaron's Homepage"
+  "title": "Aaron Van Der Male"
 }
 
 export default SiteConfig
