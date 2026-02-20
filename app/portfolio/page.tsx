@@ -16,7 +16,7 @@ const Portfolio = () => {
           </h1>
           {/* Experience 1 */}
           <Separator className="w-full mb-3  bg-gradient-to-r from-border via-border to-transparent" />
-          <div className="flex items-center bg-secondary rounded-lg">
+          <div className="flex items-center bg-gradient-to-r from-secondary via-secondary to-transparent rounded-lg">
             <Image
               src={walmartLogo.src}
               alt="WM"
