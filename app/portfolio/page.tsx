@@ -4,6 +4,7 @@ import boeingLogo from "@/assets/boeing_logo.png"
 import walmartLogo from "@/assets/walmartglobaltech_logo.png"
 import neuLogo from "@/assets/northeastern_university_logo.jpg"
 import Image from 'next/image'
+import PortfolioCard from "@/components/portfolio-card"
 
 const Portfolio = () => {
   return (
@@ -16,21 +17,12 @@ const Portfolio = () => {
           </h1>
           {/* Experience 1 */}
           <Separator className="w-full mb-3  bg-gradient-to-r from-border via-border to-transparent" />
-          <div className="flex items-center bg-gradient-to-r from-secondary via-secondary to-transparent rounded-lg">
-            <Image
-              src={walmartLogo.src}
-              alt="WM"
-              width={50}
-              height={40}
-              className="ml-2 rounded-lg"
-            />
-            <div className="mx-3">
-              <h2 className="whitespace-nowrap text-xl sm:text-2xl">Walmart Global Tech</h2>
-              {/* <h3 className="text-muted-foreground whitespace-nowrap">Walmart Global Tech</h3> */}
-              <h3 className="text-muted-foreground whitespace-nowrap">Software Engineer</h3>
-              <h3 className="text-muted-foreground text-sm whitespace-nowrap ">Dec 2025 - Present</h3>
-            </div>
-          </div>
+          <PortfolioCard
+            imgSrc={walmartLogo.src}
+            company="Walmart Global Tech"
+            jobTitle="Software Engineer III"
+            tenure="Dec 2025 - Present"
+          />
           <ul className="list-disc ml-6 space-y-2 mt-3">
             <li>Support Walmart's Unified Payment Platform in multiple regions across the US and North America</li>
             <li>Migrate legacy APIs to new cloud platform, resolving performance and compatibility issues resulting in significantly enhanced resiliance and reliability</li>
@@ -40,20 +32,12 @@ const Portfolio = () => {
 
           {/* Experience 2 */}
           <Separator className="w-full mt-4 mb-3  bg-gradient-to-r from-border via-border to-transparent" />
-          <div className="flex items-center bg-secondary rounded-lg">
-            <Image
-              src={boeingLogo.src}
-              alt="BCA"
-              width={50}
-              height={40}
-              className="ml-2 rounded-lg"
-            />
-            <div className="mx-3">
-              <h2 className="whitespace-nowrap text-xl sm:text-2xl">Boeing</h2>
-              <h3 className="text-muted-foreground whitespace-nowrap">Software Engineer</h3>
-              <h3 className="text-muted-foreground text-sm whitespace-nowrap ">Jun 2023 - Dec 2024</h3>
-            </div>
-          </div>
+          <PortfolioCard
+            imgSrc={boeingLogo.src}
+            company="Boeing"
+            jobTitle="Software Engineer"
+            tenure="Jun 2023 - Dec 2024"
+          />
           <ul className="list-disc ml-6 space-y-2 mt-3">
             <li>Supported legacy Spring applications, resolved production issues & provide devops support</li>
             <li>Developed edge compute software to subscribe to automated wing assembly build line and trigger internal business processes increasing responsiveness, correctness and reducing production flow time by over 200 shop hours</li>
@@ -66,21 +50,12 @@ const Portfolio = () => {
             Education
           </h1>
           <Separator className="w-full mt-4 mb-3  bg-gradient-to-r from-border via-border to-transparent" />
-          <div className="flex items-center bg-secondary rounded-lg">
-            <Image
-              src={neuLogo.src}
-              alt="BCA"
-              width={50}
-              height={40}
-              className="ml-2 rounded-lg"
-            />
-            <div className="mx-3 ">
-              <h2 className="whitespace-nowrap text-xl sm:text-2xl">Northeastern University</h2>
-              <h3 className="text-muted-foreground whitespace-nowrap">Master's Degree, Computer Science</h3>
-              <h3 className="text-muted-foreground text-sm whitespace-nowrap">May 2023</h3>
-            </div>
-          </div>
-
+          <PortfolioCard
+            imgSrc={neuLogo.src}
+            company="Northeastern University"
+            jobTitle="Master's Degree, Computer Science"
+            tenure="May 2023"
+          />
           <div className="min-h-20"></div>
         </div>
 
