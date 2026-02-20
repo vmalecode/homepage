@@ -2,17 +2,7 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import { ModeToggle } from "./theme-toggle"
-import {
-  Popover,
-  PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from "@/components/ui/popover"
 import { Menu, X } from "lucide-react"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { MobileNav } from "./mobile-nav"
 import {
   Dialog,
   DialogClose,
