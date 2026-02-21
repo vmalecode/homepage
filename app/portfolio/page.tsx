@@ -9,7 +9,7 @@ import PortfolioCard from "@/components/portfolio-card"
 const Portfolio = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-1 pt-2 lg:pt-15">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-1 pt-2">
         <div className="hidden lg:block"></div>
         <div className="max-w-185">
           <h1 className="whitespace-nowrap mb-4 mt-10 text-3xl sm:text-4xl tracking-tight font-bold ">

@@ -3,15 +3,14 @@ import PageTitle from "@/components/page-title"
 import Project from "@/components/project"
 import chessGif from "@/assets/chess.gif"
 import wordleGif from "@/assets/wordle.gif"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import mlGif from "@/assets/ml.gif"
 import LiLink from "@/components/li-link"
 import ResponsiveSeparator from "@/components/responsive-separator"
 
 const software = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-1 pt-2 sm:pt-15">
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-1 pt-2">
         <div className="hidden sm:block"></div>
         {/* Main content / middle */}
         <div>
@@ -21,17 +20,26 @@ const software = () => {
           </PageTitle>
           <Project title="Wordle Clone" imgSrc={wordleGif.src} imgSize={300} >
             <li>A clone of Wordle using React and Redux</li>
-            <li>Used custom CSS to create mobile friendly UI</li>
+            <li>Vanilla CSS and JavaScript</li>
             <li>Deployed on GCP Cloud Run</li>
-            <li>Containerized using Docker</li>
-            <LiLink text="REPL" url="https://replit.com/@vmalecode/Ruby-Chess-REPL#main.rb" />
+            <LiLink text="Play Now" url="https://wordle-clone-ibir6636ua-uc.a.run.app/instructions" />
+            <LiLink text="Source" url="https://github.com/vmalecode/aaron-vandermale-project2-wordle" />
           </Project>
           <ResponsiveSeparator />
           <Project title="Chess" imgSrc={chessGif.src} imgSize={450}>
             <li>A functional game of chess in the CLI using icons to simulate a board</li>
             <li>Ruby learning project</li>
-            <li>RRuby learning projectRuby learning projectRuby learning projectRuby learning projectuby learning project</li>
-            <li><Button variant="link" className="px-0"><Link href="https://replit.com/@vmalecode/Ruby-Chess-REPL#main.rb" target="_blank" rel="noopener noreferrer" >REPL</Link></Button></li>
+            <LiLink text="Source" url="https://github.com/vmalecode/chess" />
+            <LiLink text="REPL" url="https://replit.com/@vmalecode/Ruby-Chess-REPL#main.rb" />
+          </Project>
+          <ResponsiveSeparator />
+          <Project title="Machine Learning Classification" imgSrc={mlGif.src} imgSize={450}>
+            <li>ML project to classify fraudulent insurance claims from synthetic dataset</li>
+            <li>Gradient Boosting Classifier built with Python/sklearn</li>
+            <li>Utilized common methods to analyze and optimize model performance</li>
+            <li>f-1 score and detailed in extensive report</li>
+            <LiLink text="Source" url="https://github.com/vmalecode/insurance_ml_project/blob/main/report.pdf" />
+            <LiLink text="Streamlit Demo App" url="https://ml-proj-ibir6636ua-uc.a.run.app/" />
           </Project>
           <div className="hidden sm:block"></div>
         </div>

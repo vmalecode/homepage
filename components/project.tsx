@@ -25,7 +25,7 @@ const project = ({ title, children, imgSrc, imgSize }: Props) => {
         style={{ maxWidth: `${imgSize}px` }}
       />
       <div className="sm:flex justify-center">
-        <ul className="list-disc pl-6 pr-3 py-3 sm:max-w-xl">
+        <ul className="list-disc pl-6 pr-3 py-3 sm:max-w-md">
           {children}
         </ul>
       </div>
