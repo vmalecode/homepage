@@ -11,8 +11,8 @@ import ResponsiveSeparator from "@/components/responsive-separator"
 const software = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-1 pt-2 lg:pt-15">
-        <div className="hidden lg:block"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-1 pt-2 sm:pt-15">
+        <div className="hidden sm:block"></div>
         {/* Main content / middle */}
         <div>
           <PageTitle title="Demo Software" >
@@ -27,12 +27,13 @@ const software = () => {
             <LiLink text="REPL" url="https://replit.com/@vmalecode/Ruby-Chess-REPL#main.rb" />
           </Project>
           <ResponsiveSeparator />
-          <Project title="Chess" imgSrc={chessGif.src} imgSize={150}>
+          <Project title="Chess" imgSrc={chessGif.src} imgSize={450}>
             <li>A functional game of chess in the CLI using icons to simulate a board</li>
             <li>Ruby learning project</li>
+            <li>RRuby learning projectRuby learning projectRuby learning projectRuby learning projectuby learning project</li>
             <li><Button variant="link" className="px-0"><Link href="https://replit.com/@vmalecode/Ruby-Chess-REPL#main.rb" target="_blank" rel="noopener noreferrer" >REPL</Link></Button></li>
           </Project>
-          <div className="hidden lg:block"></div>
+          <div className="hidden sm:block"></div>
         </div>
       </div>
     </Container >

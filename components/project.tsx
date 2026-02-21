@@ -11,19 +11,24 @@ type Props = {
 
 const project = ({ title, children, imgSrc, imgSize }: Props) => {
   return (
-    <div className="my-4">
-      <h1 className="sm:text-center text-3xl mb-4">{title}</h1>
+    <div className="
+      my-4 
+      bg-gradient-to-r from-transparent via-border to-transparent
+      ">
+      <h1 className="sm:text-center text-3xl mb-4 pl-3 pt-3">{title}</h1>
       <Image
         src={imgSrc}
         width={imgSize}
         height={imgSize}
         alt="Missing Img"
-        className={cn("sm:mx-auto w-full sm:w-[360px]")}
+        className={cn("mx-auto w-full sm:w-[460px]")}
         style={{ maxWidth: `${imgSize}px` }}
       />
-      <ul className="list-disc pl-6">
-        {children}
-      </ul>
+      <div className="sm:flex justify-center">
+        <ul className="list-disc pl-6 pr-3 py-3 sm:max-w-xl">
+          {children}
+        </ul>
+      </div>
     </div >
   )
 }
