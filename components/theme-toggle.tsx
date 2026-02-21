@@ -1,6 +1,5 @@
 "use client"
 
-import { sleep } from "@/lib/api"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useRef } from "react"
