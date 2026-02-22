@@ -58,7 +58,7 @@ An image looks like this:
 
 ![Alt text](/images/dolla.png)
 
-The current implementation of images has limited support for sizing and managing aspect ratio
+The current implementation of images has limited support for sizing and managing aspect ratio.
 
 ![Alt text](/images/toad.jpg)
 
