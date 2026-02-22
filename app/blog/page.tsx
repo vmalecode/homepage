@@ -15,7 +15,6 @@ const BlogList = () => {
         <PageTitle title="Blogs">
           <h2 className="text-lg ">A random collection of projects, guides, and things that interest me</h2>
           <h3 className="text-sm text-muted-foreground">I do not use AI to write or assist with writing</h3>
-          <h3 className="text-sm text-muted-foreground">For development purposes, I added a bunch of generated blogs, but will delete them before v1</h3>
         </PageTitle>
       </div>
       {/* Posts */}
