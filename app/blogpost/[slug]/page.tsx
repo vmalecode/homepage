@@ -47,8 +47,7 @@ export default async function BlogPage({ params }: Params) {
       theme: "github-dark",
       transformers: [
         transformerCopyButton({
-          visibility: 'always',
-          feedbackDuration: 3_000,
+          feedbackDuration: 1_000,
         }),
       ],
     })
