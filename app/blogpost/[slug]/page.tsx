@@ -2,6 +2,7 @@ import MaxWidthWrapper from '@/components/max-width-wrapper'
 import React from 'react'
 import { unified } from "unified"
 import remarkParse from "remark-parse"
+import remarkGfm from "remark-gfm"
 import rehypeImgSize from "rehype-img-size"
 import remarkRehype from "remark-rehype"
 import rehypeSlug from 'rehype-slug'
@@ -35,6 +36,7 @@ type Params = {
 export default async function BlogPage({ params }: Params) {
   const processor = unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeImgSize, { dir: "public" })
     .use(rehypeExternalLinks, {
