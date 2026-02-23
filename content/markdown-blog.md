@@ -66,7 +66,7 @@ There are many more features that could be added to this blog, including:
  - **Pagination** for when the number of blog posts becomes too large to conveniently fit on one screen
  - **Hosting the blogs in a separate space** such as:
     - A database
-    - A public github repo
+    - A public GitHub repo
     - Object storage
  - **Allowing users to interact or comment**
 
