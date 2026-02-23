@@ -49,11 +49,11 @@ function DialogContent({
 }) {
   return (
     <DialogPortal>
-      <DialogOverlay className="fixed top-15 " />
+      <DialogOverlay className="fixed top-20 " />
       <DialogPrimitive.Popup
         data-slot="dialog-content"
         className={cn(
-          "bg-background data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 grid gap-4 p-4 text-sm duration-100 sm:max-w-sm fixed top-15 left-0 z-50 w-screen h-screen outline-none",
+          "bg-background data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 grid gap-4 p-4 text-sm duration-100 sm:max-w-sm fixed top-20 left-0 z-50 w-screen h-screen outline-none",
           className
         )}
         {...props}

@@ -17,16 +17,16 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0  z-50 bg-background/70 backdrop-blur">
-      <div className="flex h-15 items-center px-4 justify-between">
+    <nav className="sticky top-0  z-50 bg-background">
+      <div className="flex h-20 items-center px-4 justify-between">
 
         {/* Desktop title */}
         <div className="hidden md:block font-bold">
           Aaron Van Der Male
         </div>
         <Dialog onOpenChange={setOpen}>
-          <DialogTrigger className="md:hidden flex items-center ">
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <DialogTrigger className="md:hidden flex items-center text-3xl">
+            {open ? <X className="h-7 w-7" /> : <Menu className="h-8 w-8" />}
             <div className="ml-2">Menu</div>
           </DialogTrigger>
           <div className="font-bold md:hidden truncate">Aaron Van Der Male</div>
