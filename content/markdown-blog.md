@@ -1,28 +1,18 @@
 ---
-title: Demo Blog
-slug: demo-blog
-excerpt: This blog demonstrates markdown blog features
+title: Markdown Blogs
+slug: markdown-blog
+excerpt: A few comments on the features of markdown blogs.
 imageUrl: /images/coding.jpeg
-date: "2026-02-22"
+date: "2026-02-23"
 ---
 
-This post demonstrates the formatting features of markdown blogs.
 
-## Headings Look Like This
+## Markdown Blogs
 
-On desktop, they are also automatically linked in the 'On This Page' section.
+When I was creating my website to share my portfolio, I wanted to add a blog section. There's a few different ways to achieve this. Here's what a md blog is, and why I went with it.
 
-### A sub heading looks like this
-
-- **This text is bold**: This is also what a bulleted list looks like.
-- **This text is bold**: This is also what a bulleted list looks like.
-- **This text is bold**: This is also what a bulleted list looks like.
-
-A numbered list looks like this:
-
-1. **Bold text**: regular text.
-2. **Bold text**: regular text.
-3. **Bold text**: regular text.
+### Markdown Blogs
+[Markdown](https://en.wikipedia.org/wiki/Markdown) is a simple syntax that most are familiar with. As a brief reminder, md looks very close to basic text, and is designed to be easily compiled to HTML. Its original purpose was indeed for a more writer friendly way to publish formatted text on the internet.
 
 
 ## Code Blocks
