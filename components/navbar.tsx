@@ -31,7 +31,7 @@ const NavBar = () => {
           </DialogTrigger>
           <div className="font-bold md:hidden truncate">Aaron Van Der Male</div>
           <DialogContent className="bg-background/60 backdrop-blur ">
-            <ul className="text-3xl space-y-1 text-primary">
+            <ul className="text-3xl space-y-2 text-primary">
               <li><DialogTitle className="my-0 text-sm text-primary/50">Menu</DialogTitle></li>
               <li><DialogClose><Link href={"/"}>Home</Link ></DialogClose></li>
               <li><DialogClose><Link href={"/portfolio"}>Portfolio</Link ></DialogClose></li>

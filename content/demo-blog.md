@@ -1,7 +1,7 @@
 ---
 title: Demo Blog
 slug: demo-blog
-excerpt: This blog demonstrates markdown blog features
+excerpt: This blog demonstrates markdown blog features.
 imageUrl: /images/coding.jpeg
 date: "2026-02-22"
 ---

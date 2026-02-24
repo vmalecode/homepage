@@ -1,7 +1,7 @@
 ---
 title: Markdown Blogs
 slug: markdown-blog
-excerpt: A few comments on the features of markdown blogs.
+excerpt: A few comments on the features of this markdown blog.
 imageUrl: /images/coding.jpeg
 date: "2026-02-23"
 ---
