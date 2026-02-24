@@ -21,7 +21,7 @@ const Portfolio = () => {
             imgSrc={walmartLogo.src}
             company="Walmart Global Tech"
             jobTitle="Software Engineer III"
-            tenure="Dec 2025 - Present"
+            tenure="Dec 2024 - Present"
           />
           <ul className="list-disc ml-6 space-y-2 mt-3">
             <li>Support Walmart's Unified Payment Platform in multiple regions across the US and North America</li>
