@@ -14,12 +14,11 @@ import Onthispage from '@/components/on-this-page'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { rehypePrettyCode } from 'rehype-pretty-code'
 import { transformerCopyButton } from '@rehype-pretty/transformers'
-import { Metadata, ResolvingMetadata } from 'next'
 import Container from '@/components/container'
 import Link from 'next/link'
 import { Separator } from '@/components/ui/separator'
 import DateFormatter from '@/components/date-formatter'
-import { getBlog } from '@/lib/api'
+import { getBlog, getBlogs } from '@/lib/api'
 
 
 type Props = {
@@ -32,28 +31,34 @@ type Params = {
     slug: string;
   };
 };
+export async function generateStaticParams() {
+  const blogs = getBlogs();
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }))
+}
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeImgSize, { dir: "public" })
+  .use(rehypeExternalLinks, {
+    target: "_blank",
+    rel: ["nofollow", "noopener", "noreferrer"]
+  })
+  .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings)
+  .use(rehypePrettyCode, {
+    theme: "github-dark",
+    transformers: [
+      transformerCopyButton({
+        feedbackDuration: 1_000,
+      }),
+    ],
+  })
+  .use(rehypeStringify)
 
 export default async function BlogPage({ params }: Params) {
-  const processor = unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeImgSize, { dir: "public" })
-    .use(rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["nofollow", "noopener", "noreferrer"]
-    })
-    .use(rehypeSlug)
-    .use(rehypeAutolinkHeadings)
-    .use(rehypePrettyCode, {
-      theme: "github-dark",
-      transformers: [
-        transformerCopyButton({
-          feedbackDuration: 1_000,
-        }),
-      ],
-    })
-    .use(rehypeStringify)
 
   const { slug } = await params
   const filePath = `content/${slug}.md`
