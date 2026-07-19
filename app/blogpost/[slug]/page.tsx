@@ -1,5 +1,3 @@
-import MaxWidthWrapper from '@/components/max-width-wrapper'
-import React from 'react'
 import { unified } from "unified"
 import remarkParse from "remark-parse"
 import remarkGfm from "remark-gfm"
@@ -21,10 +19,6 @@ import DateFormatter from '@/components/date-formatter'
 import { getBlog, getBlogs } from '@/lib/api'
 
 
-type Props = {
-  params: { slug: string, title: string, description: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
 
 type Params = {
   params: {
@@ -103,15 +97,5 @@ export default async function BlogPage({ params }: Params) {
       </div>
     </Container >
 
-    // <MaxWidthWrapper className='prose dark:prose-invert'>
-    //   <div className='flex '>
-    //     <div className='px-16'>
-    //       <h1 className='text-2xl font-bold'>{data.title}</h1>
-    //       <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
-    //     </div>
-    //     <Onthispage className="text-sm w-[50%]" htmlContent={htmlContent} />
-    //   </div>
-    //
-    // </MaxWidthWrapper>
   )
 }
