@@ -11,7 +11,10 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN corepack enable pnpm && pnpm run build
+RUN --mount=type=secret,id=GREETING_TOKEN,env=GREETING_TOKEN \
+    --mount=type=secret,id=EMAIL_SECRET,env=EMAIL_SECRET \
+    --mount=type=secret,id=PHONE_SECRET,env=PHONE_SECRET \
+    corepack enable pnpm && pnpm run build
 
 # Stage 3: Production server
 FROM base AS runner
